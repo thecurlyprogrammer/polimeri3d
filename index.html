@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stampa 3D - Preventivi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="section-container">
+      <img src="Logo Square.svg">
+    </div>
+  </header>
+
+  <section id="chi-siamo">
+    <div class="section-container">
+      <h2 class="title">Chi Siamo</h2>
+      <p>
+        Siamo un <b>laboratorio specializzato in stampa 3D</b> che affianca aziende e privati
+        nella trasformazione delle loro idee in prodotti reali e funzionali.<br><br>
+
+        Utilizziamo stampanti 3D professionali di ultima generazione e
+        materiali tecnici ad alte prestazioni, come <b>PETG, ABS, PC, nylon e compositi rinforzati in fibra di vetro e
+          carbonio</b>,
+        per garantire risultati solidi, precisi e durevoli.<br><br>
+
+        Seguiamo ogni fase del processo: dalla consulenza progettuale alla prototipazione,
+        fino alla <b>produzione di piccole serie</b>, assicurando un supporto rapido, affidabile e su misura.<br><br>
+
+        La nostra esperienza ci permette di realizzare componenti complessi e personalizzati
+        con tolleranze precise, mantenendo sempre un <b>alto standard qualitativo</b>.<br><br>
+
+        Che si tratti di un prototipo funzionale o di un pezzo finito pronto all’uso,
+        il nostro obiettivo è fornire un servizio professionale, veloce e orientato alla soluzione,
+        per aiutarti a dare forma concreta alle tue idee.
+      </p>
+    </div>
+  </section>
+
+  <section id="cosa-facciamo">
+    <div class="section-container">
+      <h2 class="title">Cosa Facciamo</h2>
+      <p class="description">
+        Realizziamo prototipi funzionali, oggettistica personalizzata e
+        produzioni su richiesta. I nostri servizi includono modellazione,
+        consulenza e stampa 3D in diversi materiali.
+      </p>
+      <div class="row">
+        <div class="column">
+          <div class="icon"><img src="icons/01.png" alt="" /></div>
+          <div class="title">Gadget promozionali</div>
+          <div class="description">
+            Personalizza il tuo brand: realizziamo gadget unici e su misura per
+            eventi, fiere e regali aziendali.
+          </div>
+        </div>
+        <div class="column">
+          <div class="icon"><img src="icons/02.png" alt="" /></div>
+          <div class="title">Oggetti di design</div>
+          <div class="description">
+            Creatività senza limiti: dai vita a elementi d’arredo e accessori
+            esclusivi, con dettagli curati e materiali di qualità.
+          </div>
+        </div>
+        <div class="column">
+          <div class="icon"><img src="icons/03.png" alt="" /></div>
+          <div class="title">Prototipazione rapida</div>
+          <div class="description">
+            Dal progetto al modello in poche ore: test immediati delle tue idee
+            con prototipi funzionali e precisi.
+          </div>
+        </div>
+        <div class="column">
+          <div class="icon"><img src="icons/04.png" alt="" /></div>
+          <div class="title">Produzione in serie</div>
+          <div class="description">
+            Idee scalabili: produciamo centinaia o migliaia di pezzi grazie alle nostre stampanti in serie ottimizzando
+            tempi e costi.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="preventivo">
+    <div class="section-container">
+      <h2 class="title">Ottieni un preventivo personalizzato</h2>
+      <div id="preventivo_container">
+        <form action="https://submify.vercel.app/polimeri3d@outlook.it" method="POST" enctype="multipart/form-data">
+          <label>Nome:
+            <input type="text" name="nome" placeholder="Inserisci il tuo nome" required />
+          </label>
+          <label>Cognome:
+            <input type="text" name="cognome" placeholder="Inserisci il tuo cognome" required />
+          </label>
+          <label>Email:
+            <input type="email" name="email" placeholder="Inserisci la tua email" required />
+          </label>
+          <label>Messaggio:
+            <textarea name="messaggio" rows="4" placeholder="Descrivi il tuo progetto"></textarea>
+          </label>
+          <label>Carica un file (opzionale):
+            <input type="file" name="file" />
+          </label>
+          <input type="hidden" name="_autoresponse"
+            value="Grazie per aver contattato Polimeri3D, ti risponderemo entro 24 ore." />
+          <button type="submit">Invia Richiesta</button>
+        </form>
+        <div class="right">
+          <div class="timeline">
+            <div class="step">
+              <span class="number">1</span>
+              <p>Carica il file del tuo progetto</p>
+            </div>
+            <div class="step">
+              <span class="number">2</span>
+              <p>Specifica i requisiti tecnici e i dettagli necessari</p>
+            </div>
+            <div class="step">
+              <span class="number">3</span>
+              <p>I nostri esperti analizzeranno il progetto e ti ricontatteranno</p>
+            </div>
+            <div class="step">
+              <span class="number">4</span>
+              <p>Ricevi un preventivo dettagliato</p>
+            </div>
+            <div class="step">
+              <span class="number">5</span>
+              <p>Produzione di un prototipo per il controllo qualità</p>
+            </div>
+            <div class="step">
+              <span class="number">6</span>
+              <p>Avvio della produzione definitiva</p>
+            </div>
+            <div class="step">
+              <span class="number">7</span>
+              <p>Spedizione finale</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="section-container footer-container">
+      <div class="footer-brand">
+        <img src="Logo Square_white.svg">
+      </div>
+      <div class="footer-info">
+        <p hidden>
+          <span class="icon">💼</span> P.IVA: 12345678901
+        </p>
+        <p>
+          <span class="icon">📞</span> Tel: <a href="tel:+393801758519">+393801758519</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
