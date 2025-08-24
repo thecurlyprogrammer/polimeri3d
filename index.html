@@ -106,7 +106,7 @@
     <div class="section-container">
       <h2 class="title">Ottieni un preventivo personalizzato</h2>
       <div id="preventivo_container">
-        <form name="contact" method="POST" netlify enctype="multipart/form-data">
+        <form name="contact" method="POST" action="/thanks.html" enctype="multipart/form-data" netlify>
           <label>Nome:
             <input type="text" name="nome" placeholder="Inserisci il tuo nome" required />
           </label>
@@ -119,8 +119,8 @@
           <label>Messaggio:
             <textarea name="messaggio" rows="4" placeholder="Descrivi il tuo progetto"></textarea>
           </label>
-          <label>Carica un file (opzionale):
-            <input type="file" name="file" />
+          <label>Carica un file (opzionale) max 8MB:
+            <input type="file" name="file" accept=".stl, .3mf"/>
           </label>
           <button type="submit">Invia Richiesta</button>
         </form>
