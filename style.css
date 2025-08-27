@@ -111,18 +111,18 @@ h2.title {
     text-align: center;
 }
 
-#cosa-facciamo p.description{
+#cosa-facciamo p.description {
     color: var(--colore-bianco-1);
 }
 
-.row {
+#cosa-facciamo .row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 16px;
 }
 
-.column {
+#cosa-facciamo .row>.column {
     padding: 16px;
     width: calc(25% - 16px);
     display: flex;
@@ -132,16 +132,54 @@ h2.title {
     border-radius: 8px;
 }
 
-.column .icon img {
+#cosa-facciamo .column .icon img {
     height: 60px;
 }
 
-.column .title {
+#cosa-facciamo .column .title {
     font-size: 18px;
 }
 
-.column .description {
+#cosa-facciamo .column .description {
     font-size: 14px;
+}
+
+/* Partner */
+
+#partner {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#partner .row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#partner > .row > .column {
+    flex: 1 1 calc(25% - 16px);
+    max-width: calc(25% - 16px);
+    padding: 8px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid var(--colore-bianco-2);
+}
+
+#partner>.row>.column img {
+    max-height: 90px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+
 }
 
 /* Preventivo */
@@ -283,7 +321,12 @@ footer {
         width: 100%;
     }
 
-    .column {
+    #partner>.row>.column {
+        flex: 1 1 calc(50% - 16px);
+        max-width: calc(50% - 16px);
+    }
+
+    #cosa-facciamo .row>.column {
         width: calc(50% - 16px);
     }
 
@@ -305,10 +348,20 @@ footer {
     }
 
 
-    .column {
+    #cosa-facciamo .row>.column {
         width: calc(100%);
     }
 
+    #partner>.row>.column {
+        flex: 1 1 calc(50% - 16px);
+        max-width: calc(50% - 16px);
+    }
+
+    #partner a>img {
+        max-height: auto;
+        width: 100%;
+
+    }
 
     .footer-brand,
     .footer-info {
