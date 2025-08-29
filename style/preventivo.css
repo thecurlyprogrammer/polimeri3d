@@ -1,0 +1,123 @@
+form label {
+    display: block;
+    margin-top: 1rem;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--colore-terziario);
+    border-radius: 6px;
+}
+
+h2.title {
+    color: var(--colore-primario);
+    text-align: center;
+}
+
+/* Preventivo */
+
+#preventivo>.title {
+    text-align: center;
+}
+
+#preventivo_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#preventivo>.title {
+    color: var(--colore-primario);
+}
+
+#preventivo input,
+#preventivo textarea {
+    border-radius: 0px;
+    text-decoration: none;
+    width: 100%;
+}
+
+#preventivo_container form {
+    width: 50%;
+    padding: 16px;
+}
+
+#preventivo_container .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+form button {
+    background-color: var(--colore-primario);
+    color: var(--colore-secondario);
+    border-radius: 0.75rem;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.step .number {
+    background: var(--colore-primario);
+    color: var(--colore-secondario);
+    font-weight: bold;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.step p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--colore-primario);
+    line-height: 1.4;
+}
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+
+    #preventivo_container form {
+        width: 100%;
+    }
+
+    #preventivo_container .right {
+        width: 100%;
+    }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+
+    #preventivo_container form {
+        width: 100%;
+    }
+
+    #preventivo_container .right {
+        width: 100%;
+    }
+}
