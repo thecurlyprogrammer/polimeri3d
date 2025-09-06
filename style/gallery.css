@@ -1,0 +1,36 @@
+#gallery{
+    width: 100%;
+    padding: 0;
+}
+
+.gallery_row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gallery_col{
+    width: 25%;
+    max-height: 400px;
+}
+
+.gallery_col img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+    .gallery_col {
+        width: 50%;
+    }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .gallery_col {
+        width: 100%;
+    }
+}
