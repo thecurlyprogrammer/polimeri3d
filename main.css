@@ -1,4 +1,7 @@
+@import url("style/palette.css");
 @import url("style/header.css");
+@import url("style/nav.css");
+@import url("style/lead_form.css");
 @import url("style/cosa_facciamo.css");
 @import url("style/tecnologie.css");
 @import url("style/partner.css");
@@ -13,55 +16,83 @@
     box-sizing: border-box;
 }
 
-:root {
-    --polimeri: #FF2E63;
-    --colore-primario: #2f3640;
-    --colore-secondario: #f5f6fa;
-    --colore-terziario: #7f8fa6;
-    --colore-bianco-1: #fafafa;
-    --colore-bianco-2: #dcdde1;
-}
-
-
-html {
-    font-family: "Poppins", sans-serif;
-}
-
 body {
     margin: 0;
     line-height: 1.6;
-    background: var(--colore-bianco-1);
-    color: var(--colore-primario);
+    background: white;
+    color: var(--eerie-black);
+    font-family: "Inter", Sans-serif;
+}
+
+.debug {
+    /*border: 1px solid red;
+    */
+}
+
+.main_btn {
+    width: 200px;
+    height: 48px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    background-color: var(--color-primary);
+    font-size: 16px;
+    border-radius: 16px;
+}
+
+.btn-xxl{
+    padding: 16px 32px;
+    width: 250px;
+    height: 60px;
 }
 
 section {
-    width: 100%;
-    padding: 24px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-
 
 .section-container {
+    display: flex;
     max-width: 1200px;
+    padding: 24px;
 }
 
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 5px #999;
-  z-index: 1000;
+.vertical {
+    flex-direction: column;
+    width: 100%;
 }
+
+.horizontal {
+    flex-direction: row;
+}
+
+.center_center {
+    justify-content: center;
+    align-items: center;
+}
+
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 5px #999;
+    z-index: 1000;
+}
+
 .whatsapp-float img {
-  margin-top: 7px;
-  width: 45px;
-  height: 45px;
+    margin-top: 7px;
+    width: 45px;
+    height: 45px;
 }

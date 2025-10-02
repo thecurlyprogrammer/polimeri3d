@@ -1,16 +1,16 @@
 /* Cosa facciamo */
 
 #cosa-facciamo {
-    background-color: var(--polimeri);
+    background-color: var(--platinum);
+    /*background-color: rgba(255, 46, 99, 0.2);*/
+}
+
+#cosa-facciamo p.description{
+    font-size: 18px;
 }
 
 #cosa-facciamo h2.title {
-    color: var(--colore-bianco-1);
     text-align: center;
-}
-
-#cosa-facciamo p.description {
-    color: var(--colore-bianco-1);
 }
 
 #cosa-facciamo .row {
@@ -26,13 +26,15 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: var(--colore-bianco-1);
+    background-color: var(--seasalt);
+    color: var(--eerie-black);
     border-radius: 8px;
+    box-shadow: 0px 0px 16px #343a4020;
 }
 
 #cosa-facciamo .column .icon img {
     height: 60px;
-}
+}    
 
 #cosa-facciamo .column .title {
     font-size: 18px;

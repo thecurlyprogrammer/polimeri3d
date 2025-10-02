@@ -2,23 +2,27 @@
 <html lang="it">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Polimeri3D - Servizi di stampa 3D e prototipazione rapida</title>
   <meta name="description"
     content="Servizi di stampa 3D su misura: carica il tuo file, ricevi un preventivo rapido e realizza prototipi di qualità professionale. Spediamo in tutta Italia.">
   <link rel="canonical" href="https://www.polimeri3d.com/">
 
-  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="main.css">
 
-  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
-  <link rel="shortcut icon" href="favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Polimeri3D" />
-  <link rel="manifest" href="favicon/site.webmanifest" />
-  
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Polimeri3D">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-W13Z7K4299"></script>
   <script>
@@ -36,58 +40,88 @@
   <script>
     gtag('event', 'conversion', { 'send_to': 'AW-17528995737/gFm-CJXYyJUbEJn_vKZB' });
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.18.1/dist/core.js"></script>
+
+  <script src="main.js" defer></script>
+
 </head>
 
 <body>
-  <header>
-    <div class="section-container">
-      <img src="assets/logo/Logo Square.svg" alt="Logo di Polimeri3D">
-      <div class="social-section">
-        <a href="https://www.instagram.com/polimeri3d/" target="_blank" class="social-button">Instagram</a>
-        <a href="https://www.facebook.com/share/16TU5jMCpG/?mibextid=wwXIfr" target="_blank"
-          class="social-button">Facebook</a>
-        <a href="https://www.linkedin.com/company/polimeri-3d-printing/" target="_blank"
-          class="social-button">Linkedin</a>
+
+  <header class="debug">
+    <!-- NAVBAR -->
+    <nav>
+      <div id="nav_main" class="debug">
+        <div id="nav_left">
+          <img class="desktop" src="assets/logo/Logo_Square.svg" alt="Logo di Polimeri3D">
+          <img class="mobile" src="favicon/apple-touch-icon.png" alt="Logo di Polimeri3D">
+        </div>
+        <div id="nav_right">
+          <a class="main_btn" href="mailto:info@polimeri3d.com">Richiedi un Preventivo</a>
+        </div>
       </div>
-    </div>
+    </nav>
+
+    <section id="lead_form" class="vertical debug">
+      <h1>Trasformiamo le tue idee <span id="typewriter" class="main_color"></span></h1>
+      <div class="section-container debug">
+        <div class="lead_left debug">
+          <img src="assets/images/Lab.jpeg" alt="">
+          <h3>Hai un'idea? Noi la trasformiamo in realtà.</h3>
+          <h3>La stampa 3D è la soluzione per prototipi rapidi, componenti su misura e produzioni agili.</h3>
+          <h3>Scarica la guida gratuita e scopri come migliorare efficienza e competitività nella tua azienda.</h3>
+        </div>
+
+        <!-- Lead Form -->
+        <form id="guida-pdf" class="card debug" name="guida-pdf" method="POST"
+          action="https://guidapdf-polimerid.eu1.pitunnel.net/guidapdf">
+          <div class="form-title">Scarica subito la guida</div>
+          <input type="text" id="name" name="name" placeholder="Il tuo nome" required>
+          <input type="email" id="email" name="email" placeholder="La tua email" required>
+          <div class="check">
+            <input type="checkbox" id="checkbox" name="checkbox" value="check" required>
+            <label for="checkbox"> Presto il mio consenso nel condividere la mia mail per scopi commerciali.</label>
+
+          </div>
+          <button type="submit" id="submitBtn">
+            Scarica la guida gratuita
+          </button>
+          <div class="form-footer">Tutti i dati sono trattati in modo confidenziale, non li condividiamo con nessuno.
+          </div>
+          <div class="privacy">Link alla <a
+              href="https://www.freeprivacypolicy.com/live/fb94c364-4891-47e6-a76c-d4b73e79bd4c">Privacy Policy</a>.
+          </div>
+        </form>
+      </div>
+    </section>
   </header>
 
-  <section id="chi-siamo">
-    <div class="section-container">
-      <h2 class="title">Chi Siamo</h2>
-      <p>
-        Siamo un <b>laboratorio specializzato in stampa 3D</b> che affianca aziende e privati
-        nella trasformazione delle loro idee in prodotti reali e funzionali.<br><br>
-
-        Utilizziamo stampanti 3D professionali di ultima generazione e
-        materiali tecnici ad alte prestazioni, come <b>PETG, ABS, PC, nylon e compositi rinforzati in fibra di vetro e
-          carbonio</b>,
-        per garantire risultati solidi, precisi e durevoli.<br><br>
-
-        Seguiamo ogni fase del processo: dalla consulenza progettuale alla prototipazione,
-        fino alla <b>produzione di piccole serie</b>, assicurando un supporto rapido, affidabile e su misura.<br><br>
-
-        La nostra esperienza ci permette di realizzare componenti complessi e personalizzati
-        con tolleranze precise, mantenendo sempre un <b>alto standard qualitativo</b>.<br><br>
-
-        Che si tratti di un prototipo funzionale o di un pezzo finito pronto all’uso,
-        il nostro obiettivo è fornire un servizio professionale, veloce e orientato alla soluzione,
-        per aiutarti a dare forma concreta alle tue idee.
-      </p>
+  <section id="gallery" class="debug">
+    <div class="gallery_row">
+      <div class="gallery_col"><img src="assets/images/Website1.jpeg" alt="Immagine che raffigura un prodotto"></div>
+      <div class="gallery_col"><img src="assets/images/Website2.jpeg" alt="Immagine che raffigura un prodotto"></div>
+      <div class="gallery_col"><img src="assets/images/Website3.jpeg" alt="Immagine che raffigura un prodotto"></div>
+      <div class="gallery_col"><img src="assets/images/Website4.jpeg" alt="Immagine che raffigura un prodotto"></div>
     </div>
   </section>
 
-  <section id="cosa-facciamo">
-    <div class="section-container">
+  <section id="cosa-facciamo" class="debug">
+    <div class="section-container vertical debug">
       <h2 class="title">Cosa Facciamo</h2>
       <p class="description">
-        Realizziamo prototipi funzionali, oggettistica personalizzata e
-        produzioni su richiesta. I nostri servizi includono modellazione,
-        consulenza e stampa 3D in diversi materiali.
+        Forniamo soluzioni professionali di stampa 3D ad alte prestazioni, garantendo il miglior rapporto qualità-prezzo
+        sul mercato Italiano.
+        <br>I nostri servizi sono pensati per aziende che necessitano di prototipazione rapida, produzione di componenti
+        tecnici e ottimizzazione dei processi produttivi.
+        <br>Operiamo con tecnologie avanzate e polimeri tecnici tramite stampanti Fused Deposition Modeling (FDM) per
+        prototipi rapidi, funzionali e altamente resistenti.
+        <br>Collaboriamo con imprese di diversi settori, offrendo supporto tecnico, consulenza personalizzata e
+        produzioni su misura, con tempi di consegna rapidi e standard qualitativi elevati.
       </p>
       <div class="row">
         <div class="column">
-          <div class="icon"><img src="assets/icons/01.png" alt="Icona che raffigura i gadget promozionali" /></div>
+          <div class="icon"><img src="assets/icons/01.png" alt="Icona che raffigura i gadget promozionali"></div>
           <div class="title">Gadget promozionali</div>
           <div class="description">
             Personalizza il tuo brand: realizziamo gadget unici e su misura per
@@ -95,7 +129,7 @@
           </div>
         </div>
         <div class="column">
-          <div class="icon"><img src="assets/icons/02.png" alt="Icona che raffigura oggetti di design" /></div>
+          <div class="icon"><img src="assets/icons/02.png" alt="Icona che raffigura oggetti di design"></div>
           <div class="title">Oggetti di design</div>
           <div class="description">
             Creatività senza limiti: dai vita a elementi d’arredo e accessori
@@ -103,7 +137,7 @@
           </div>
         </div>
         <div class="column">
-          <div class="icon"><img src="assets/icons/03.png" alt="Icona che raffigura prototipazione rapida" /></div>
+          <div class="icon"><img src="assets/icons/03.png" alt="Icona che raffigura prototipazione rapida"></div>
           <div class="title">Prototipazione rapida</div>
           <div class="description">
             Dal progetto al modello in poche ore: test immediati delle tue idee
@@ -111,7 +145,7 @@
           </div>
         </div>
         <div class="column">
-          <div class="icon"><img src="assets/icons/04.png" alt="Icona che raffigura produzione in serie" /></div>
+          <div class="icon"><img src="assets/icons/04.png" alt="Icona che raffigura produzione in serie"></div>
           <div class="title">Produzione in serie</div>
           <div class="description">
             Idee scalabili: produciamo centinaia o migliaia di pezzi grazie alle nostre stampanti in serie ottimizzando
@@ -122,19 +156,12 @@
     </div>
   </section>
 
-  <section id="gallery">
-    <div class="gallery_row">
-      <div class="gallery_col"><img src="assets/images/Website1.jpeg" alt="Immagine che raffigura un prodotto"></div>
-      <div class="gallery_col"><img src="assets/images/Website2.jpeg" alt="Immagine che raffigura un prodotto"></div>
-      <div class="gallery_col"><img src="assets/images/Website3.jpeg" alt="Immagine che raffigura un prodotto"></div>
-      <div class="gallery_col"><img src="assets/images/Website4.jpeg" alt="Immagine che raffigura un prodotto"></div>
+  <section id="partner" class="debug">
+    <div class="partner-title debug">
+      <h1 id="title">Chi ci ha scelto</h1>
+      <h3 id="description">Ogni logo rappresenta una collaborazione, un progetto, una storia di successo.</h3>
     </div>
-  </section>
-
-  <section id="partner">
-    <h1 id="title">Chi ci ha scelto</h1>
-    <h3 id="description">Ogni logo rappresenta una collaborazione, un progetto, una storia di successo.</h3>
-    <div class="row">
+    <div class="row debug">
       <div class="column">
         <a href="https://www.studiodentisticocordalonga.com" target="_blank"><img
             src="assets/partners/Logo_Ambulatorio.png" alt="Logo Ambulatorio Odontoiatrico Cordalonga"></a>
@@ -162,84 +189,47 @@
         <a href="https://motobordieri.com" target="_blank"><img src="assets/partners/Logo_MotoBordieri.png"
             alt="Logo Moto Bordieri"></a>
       </div>
+      <div class="column">
+        <div class="partner-text">+  Clienti Privati</div>
+      </div>
     </div>
   </section>
 
-  <section id="preventivo">
-    <div class="section-container">
-      <h2 class="title">Ottieni un preventivo personalizzato</h2>
-      <div id="preventivo_container">
-        <form name="contact" method="POST" action="/thanks.html" enctype="multipart/form-data" netlify>
-          <label>Nome:
-            <input type="text" name="nome" placeholder="Inserisci il tuo nome" required />
-          </label>
-          <label>Cognome:
-            <input type="text" name="cognome" placeholder="Inserisci il tuo cognome" required />
-          </label>
-          <label>Email:
-            <input type="email" name="email" placeholder="Inserisci la tua email" required />
-          </label>
-          <label>Telefono:
-            <input type="tel" name="telefono" placeholder="Inserisci il tuo numero di telefono" required>
-          </label>
-          <label>Messaggio:
-            <textarea name="messaggio" rows="4" placeholder="Descrivi il tuo progetto"></textarea>
-          </label>
-          <label>Carica un file (opzionale) max 8MB:
-            <input type="file" name="file" accept=".stl, .3mf" />
-          </label>
-          <button type="submit">Invia Richiesta</button>
-        </form>
-        <div class="right">
-          <div class="timeline">
-            <div class="step">
-              <span class="number">1</span>
-              <p>Carica il file del tuo progetto</p>
-            </div>
-            <div class="step">
-              <span class="number">2</span>
-              <p>Specifica i requisiti tecnici e i dettagli necessari</p>
-            </div>
-            <div class="step">
-              <span class="number">3</span>
-              <p>I nostri esperti analizzeranno il progetto e ti ricontatteranno</p>
-            </div>
-            <div class="step">
-              <span class="number">4</span>
-              <p>Ricevi un preventivo dettagliato</p>
-            </div>
-            <div class="step">
-              <span class="number">5</span>
-              <p>Produzione di un prototipo per il controllo qualità</p>
-            </div>
-            <div class="step">
-              <span class="number">6</span>
-              <p>Avvio della produzione definitiva</p>
-            </div>
-            <div class="step">
-              <span class="number">7</span>
-              <p>Spedizione finale</p>
-            </div>
-          </div>
-        </div>
+  <section id="preventivo" class="debug">
+    <div class="section-container horizontal debug">
+      <div class="info_left debug">
+        <h2>Hai altre domande?</h2>
+        <h4>Non lasciare che il tuo progetto aspetti!
+          Contattaci ora per un preventivo immediato: riceverai la nostra risposta entro poche ore.</h4>
+      </div>
+      <div class="info_right debug">
+        <a class="main_btn btn-xxl" href="mailto:info@polimeri3d.com">
+          Richiedi un preventivo
+        </a>
       </div>
     </div>
   </section>
+
   <a href="https://wa.me/393793190383" class="whatsapp-float" target="_blank">
     <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
   </a>
-  <footer class="footer">
-    <div class="section-container footer-container">
+  <footer class="debug">
+    <div class="section-container horizontal debug">
       <div class="footer-brand">
-        <img src="assets/logo/Logo Square_white.svg" alt="Logo di Polimeri3D">
+        <img src="assets/logo/Logo_Square_white.svg" alt="Logo di Polimeri3D">
+        <div>Il vostro service di stampa 3D per stampe personalizzate e di alta qualità in Italia.</div>
       </div>
       <div class="footer-info">
+        <div class="footer-contact-title">Contatti</div>
+        <div><span class="icon">✉️</span> <a href="mailto:info@polimeri3d.com">info@polimeri3d.com</a></div>
+        <div><span class="icon">📞</span> Tel: <a href="tel:+393793190383">+39 3793190383</a></div>
         <div>
           <span class="icon">💼</span> P.IVA: 02162920850
         </div>
-        <div><span class="icon">📞</span> Tel: <a href="tel:+393793190383">+393793190383</a></div>
-        <div>&copy; 2025 Polimeri3D | <a
-            href="https://www.freeprivacypolicy.com/live/fb94c364-4891-47e6-a76c-d4b73e79bd4c">Privacy Policy</a></div>
+      </div>
+      <hr>
+      <div class="copy">&copy; 2025 Polimeri3D | <a
+          href="https://www.freeprivacypolicy.com/live/fb94c364-4891-47e6-a76c-d4b73e79bd4c">Privacy Policy</a>
       </div>
     </div>
   </footer>

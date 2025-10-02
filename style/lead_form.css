@@ -1,0 +1,139 @@
+.main_color{
+    color: var(--color-primary);
+}
+
+#lead_form > .section-container{
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.privacy{
+    font-size: 14px;
+    text-align: right;
+}
+
+.privacy a{
+    color: var(--outer-space);
+}
+
+.form-title{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.form-footer{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--onyx);
+}
+
+.lead_left{
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 12px);
+}
+
+.lead_left > img{
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+#lead_form > h1 {
+    padding: 24px;
+    max-width: 1024px;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0;
+    min-height: 200px;
+}
+
+.lead_left > h3 {
+    max-width: 800px;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    width: calc(50% - 12px);
+    max-width: 650px;
+    background-color: var(--seasalt);
+    padding: 24px;
+    box-shadow: 0px 0px 16px #343a4030;
+    border-radius: 24px;
+}
+
+.card > input {
+    height: 48px;
+    border-radius: 16px;
+    font-size: 14px;
+    background: var(--white);
+    border: 1px solid var(--antiflash-white);
+    padding: 0px 24px;
+}
+
+.card button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    background: var(--color-primary);
+    color: var(--white);
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card button:disabled {
+    background-color: var(--color-primary);
+    color: var(--white);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.check label{
+    font-size: 16px;
+}
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+    .lead_left, .card{
+        width: calc(50% - 12px);
+    }
+
+    #lead_form > h1 {
+        max-width: 900px;
+        min-height: 130px;
+        font-size: 36px;
+    }
+
+    .lead_left > h3 {
+        font-size: 18px;
+        max-width: 800px;
+        text-align: center;
+    }
+}
+
+/* Mobile (max-width: 600px) */
+@media (max-width: 600px) {
+    .lead_left, .card{
+        width: 100%;
+    }
+
+    #lead_form > h1 {
+        max-width: 600px;
+        min-height: 130px;
+        font-size: 32px;
+    }
+
+    .lead_left > h3 {
+        max-width: 600px;
+    }
+}
