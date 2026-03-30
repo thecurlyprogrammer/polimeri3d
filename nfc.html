@@ -5,34 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lettura NFC</title>
   <style>
-    body { font-family: sans-serif; padding: 2rem; text-align: center; }
-    button { padding: 1rem 2rem; font-size: 1.2rem; cursor: pointer; }
+    body { font-family: sans-serif; padding: 2rem; text-align: center; background: #f0f8ff; }
+    button { padding: 1rem 2rem; font-size: 1.2rem; cursor: pointer; margin-top: 1rem; }
     #output { margin-top: 2rem; font-weight: bold; color: #333; }
+    a { color: #0077cc; text-decoration: none; }
   </style>
 </head>
 <body>
   <h1>Scansiona un Tag NFC</h1>
-  <button id="scanButton">Scansiona Tag NFC</button>
-  <div id="output">Nessun tag letto</div>
+  <div id="output">Controllo compatibilità NFC...</div>
+  <button id="scanButton" style="display:none;">Scansiona Tag NFC</button>
 
   <script>
-    const button = document.getElementById('scanButton');
     const output = document.getElementById('output');
+    const button = document.getElementById('scanButton');
 
-    button.addEventListener('click', async () => {
-      if ('NDEFReader' in window) {
+    // Controllo compatibilità
+    if ('NDEFReader' in window) {
+      output.textContent = 'Tutto pronto! Clicca il bottone per scansionare un tag NFC.';
+      button.style.display = 'inline-block';
+
+      button.addEventListener('click', async () => {
         const ndef = new NDEFReader();
         try {
-          await ndef.scan();
+          await ndef.scan(); // chiede permesso all'utente
           output.textContent = 'Avvicina il tag NFC al dispositivo...';
 
           ndef.onreading = event => {
-            let tagId = "";
-            if (event.serialNumber) {
-              tagId = event.serialNumber; // UID del tag
-            } else {
-              tagId = "ID non disponibile";
-            }
+            const tagId = event.serialNumber || 'ID non disponibile';
             output.textContent = `Tag letto: ${tagId}`;
             console.log('Tag serialNumber:', tagId);
           };
@@ -40,14 +40,21 @@
           ndef.onreadingerror = () => {
             output.textContent = 'Errore nella lettura del tag.';
           };
+
         } catch (error) {
           output.textContent = `Errore NFC: ${error.message}`;
           console.error(error);
         }
-      } else {
-        output.textContent = "NFC non supportato su questo browser/dispositivo.";
-      }
-    });
+      });
+
+    } else {
+      output.innerHTML = `
+        NFC non supportato su questo browser.<br>
+        Su iPhone usa <b>Safari iPhone XS o successivo</b>.<br>
+        Su Android usa <b>Chrome o Edge Android recente</b>.<br>
+        Se vuoi, puoi comunque aprire il link diretto del tag NFC se contiene un URL.
+      `;
+    }
   </script>
 </body>
 </html>
