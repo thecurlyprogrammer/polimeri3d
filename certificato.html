@@ -510,7 +510,7 @@
         <span class="nfc-label">Tag NFC verificato</span>
       </div>
       <div class="cert-serial-footer" id="seriale_footer"></div>
-      <a class="link" href="https://www.polimeri3dstore.com">Polimeri3D</a>
+      <a class="link" href="https://www.polimeri3dstore.com">Copyright &copy; <span id="year"></span> - Polimeri3D</a>
     </div>
 
   </div>
@@ -577,6 +577,7 @@
     }
 
     loadCertificato();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
 </body>
