@@ -400,7 +400,7 @@
       letter-spacing: 0.04em;
     }
 
-    .link{
+    .link {
       text-decoration: none;
     }
   </style>
@@ -490,6 +490,19 @@
       </div>
     </div>
 
+    <!-- CURA -->
+    <div class="card">
+      <h2 class="story-title">Prenditi cura del tuo prodotto</h2>
+      <p class="story-body">Ogni vaso è realizzato con cura e progettato per durare nel tempo. Per preservarne estetica
+        e integrità, ti consigliamo di seguire queste semplici attenzioni:
+        <br>- Protezione dal calore: Evita l’esposizione a fonti di calore diretto come termosifoni, stufe o luce solare
+        intensa e prolungata. Temperature elevate potrebbero alterarne la forma.
+        <br>- Pulizia delicata: Per la manutenzione quotidiana, utilizza un panno in microfibra morbido, asciutto o
+        leggermente inumidito. Si consiglia di evitare prodotti chimici aggressivi o materiali abrasivi. Con pochi
+        gesti, il tuo vaso manterrà nel tempo la sua eleganza originale.
+      </p>
+    </div>
+
     <!-- CERT FOOTER -->
     <div class="card cert-footer">
       <div class="nfc-pill">
@@ -519,8 +532,7 @@
 
     const SUPABASE_URL = "https://onvxtmcmlqjawjjlpqvf.supabase.co";
     const API_KEY = "sb_publishable_1IgFEIvdwQlXsF6MIUkzXw_OR3Zctka";
-    
-    // prende seriale da URL 
+
     const params = new URLSearchParams(window.location.search);
     const seriale = params.get("seriale");
 
