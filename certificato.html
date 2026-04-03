@@ -530,38 +530,35 @@
       btn.addEventListener('click', () => { d = d === 'dark' ? 'light' : 'dark'; root.setAttribute('data-theme', d); render(); });
     })();
 
-    const SUPABASE_URL = "https://onvxtmcmlqjawjjlpqvf.supabase.co";
-    const API_KEY = "sb_publishable_1IgFEIvdwQlXsF6MIUkzXw_OR3Zctka";
-
     const params = new URLSearchParams(window.location.search);
     const seriale = params.get("seriale");
 
     async function loadCertificato() {
-      const res = await fetch(`${SUPABASE_URL}/rest/v1/certificati?seriale_prodotto=eq.${seriale}&select=*,collezioni(nome)`, {
-        headers: {
-          apikey: API_KEY,
-          Authorization: `Bearer ${API_KEY}`
-        }
-      });
+      const url = `https://certificates-polimerid.eu1.pitunnel.net/certificato?seriale=${encodeURIComponent(seriale)}`;
+      const res = await fetch(url);
+      
+      if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+      }
 
       console.log("res " + res);
 
       const data = await res.json();
-      const c = data[0];
+      const c = data;
 
       // HEADER
-      document.getElementById("seriale_footer").innerText = "#" + c.seriale_prodotto;
-      document.getElementById("nome").innerText = c.nome_prodotto;
+      document.getElementById("seriale_footer").innerText = "#" + c.seriale;
+      document.getElementById("nome").innerText = c.nome;
 
-      document.getElementById("immagine").src = c.immagine_url;
+      document.getElementById("immagine").src = c.image_url;
 
-      document.getElementById("collezione").innerText = c.collezioni?.nome || "";
-      document.getElementById("edizione").innerText = `${c.numero_pezzo}/${c.totale_pezzi}`;
+      document.getElementById("collezione").innerText = c.collezione || "";
+      document.getElementById("edizione").innerText = `${c.numero_pezzo}/${c.numero_massimo}`;
       document.getElementById("rarita").innerText = c.rarita || "";
 
       // META
       document.getElementById("data").innerText = new Date(c.data_produzione).toLocaleDateString();
-      document.getElementById("meteo").innerText = `${c.meteo || ""} ${c.temperatura_ambiente || ""}°C`;
+      document.getElementById("meteo").innerText = `${c.meteo || ""} ${c.temperatura || ""}°C`;
 
       // STORY
       document.getElementById("titolo_storia").innerText = c.titolo_storia || "";
@@ -572,8 +569,8 @@
       document.getElementById("tecnologia").innerText = c.tecnologia || "-";
       document.getElementById("finitura").innerText = c.finitura || "-";
       document.getElementById("colore").innerText = c.colore || "-";
-      document.getElementById("peso").innerText = c.peso_grammi ? c.peso_grammi + "g" : "-";
-      document.getElementById("altezza").innerText = c.altezza_mm ? c.altezza_mm + "mm" : "-";
+      document.getElementById("peso").innerText = c.peso ? c.peso + "g" : "-";
+      document.getElementById("altezza").innerText = c.altezza ? c.altezza + "mm" : "-";
     }
 
     loadCertificato();
