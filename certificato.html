@@ -456,7 +456,9 @@
     <!-- STORY -->
     <div class="card">
       <h2 class="story-title" id="titolo_storia"></h2>
-      <p class="story-body" id="storia"></p>
+      <span class="story-body" id="intro_storia"></span>
+      <span class="story-body" id="corpo_storia"></span>
+      <span class="story-body" id="conclusione"></span>
     </div>
 
     <!-- SPECS -->
@@ -493,14 +495,7 @@
     <!-- CURA -->
     <div class="card">
       <h2 class="story-title">Prenditi cura del tuo prodotto</h2>
-      <p class="story-body">Ogni vaso è realizzato con cura e progettato per durare nel tempo. Per preservarne estetica
-        e integrità, ti consigliamo di seguire queste semplici attenzioni:
-        <br>- Protezione dal calore: Evita l’esposizione a fonti di calore diretto come termosifoni, stufe o luce solare
-        intensa e prolungata. Temperature elevate potrebbero alterarne la forma.
-        <br>- Pulizia delicata: Per la manutenzione quotidiana, utilizza un panno in microfibra morbido, asciutto o
-        leggermente inumidito. Si consiglia di evitare prodotti chimici aggressivi o materiali abrasivi. Con pochi
-        gesti, il tuo vaso manterrà nel tempo la sua eleganza originale.
-      </p>
+      <p id="cura_del_prodotto" class="story-body"></p>
     </div>
 
     <!-- CERT FOOTER -->
@@ -562,7 +557,10 @@
 
       // STORY
       document.getElementById("titolo_storia").innerText = c.titolo_storia || "";
-      document.getElementById("storia").innerText = c.storia || "";
+      document.getElementById("intro_storia").innerText = c.intro_storia || "";
+      document.getElementById("corpo_storia").innerText = c.corpo_storia || "";
+      document.getElementById("conclusione").innerText = c.conclusione || "";
+      document.getElementById("cura_del_prodotto").innerText = c.cura_del_prodotto || "";
 
       // DETTAGLI
       document.getElementById("materiale").innerText = c.materiale || "-";
