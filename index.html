@@ -10,7 +10,7 @@
     content="Prototipazione rapida, produzione in serie e oggetti su misura in stampa 3D. Carica il tuo progetto, ricevi un preventivo rapido: per aziende e per privati, in tutta Italia.">
   <link rel="canonical" href="https://www.polimeri3d.com/">
 
-  <link rel="stylesheet" href="main.css?v=7">
+  <link rel="stylesheet" href="main.css?v=9">
 
   <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
   <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
@@ -33,13 +33,14 @@
     gtag('event', 'conversion', { 'send_to': 'AW-17528995737/gFm-CJXYyJUbEJn_vKZB' });
   </script>
 
-  <script src="main.js?v=10" defer></script>
+  <script src="main.js?v=11" defer></script>
 </head>
 
 <body>
 
   <!-- NAVBAR -->
   <header id="navbar">
+    <div class="nav-scrim" id="navScrim" aria-hidden="true"></div>
     <div class="nav-inner">
       <a href="#hero" class="nav-brand">
         <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
@@ -49,17 +50,23 @@
         <span>POLIMERI3D</span>
       </a>
       <nav>
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
           <li><a href="#chi-siamo">Chi siamo</a></li>
           <li><a href="#come-funziona">Come funziona</a></li>
           <li><a href="#materiali">Materiali</a></li>
           <li><a href="#galleria">Galleria</a></li>
           <li><a href="#contatti">Contatti</a></li>
+          <li class="nav-links-cta">
+            <a class="btn btn-primary btn-block" href="#contatti">Richiedi un preventivo</a>
+          </li>
         </ul>
       </nav>
       <div class="nav-cta">
-        <a class="btn btn-primary" href="#contatti"><span>Richiedi un preventivo</span></a>
-        <button class="nav-toggle" id="navToggle" aria-label="Apri il menu"><span></span></button>
+        <a class="btn btn-primary" href="#contatti">Richiedi un preventivo</a>
+        <button class="nav-toggle" id="navToggle"
+                aria-label="Apri il menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span>
+        </button>
       </div>
     </div>
   </header>

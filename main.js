@@ -11,16 +11,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* -------------------- Mobile nav toggle -------------------- */
   const navToggle = document.getElementById("navToggle");
-  const navLinks = document.querySelector(".nav-links");
+  const navLinks  = document.getElementById("navLinks");
+  const navScrim  = document.getElementById("navScrim");
+
   if (navToggle && navLinks) {
+    const setMenu = (open) => {
+      navLinks.classList.toggle("is-open", open);
+      navToggle.classList.toggle("is-open", open);
+      document.body.classList.toggle("nav-open", open);
+      navToggle.setAttribute("aria-expanded", String(open));
+      navToggle.setAttribute("aria-label", open ? "Chiudi il menu" : "Apri il menu");
+    };
+
     navToggle.addEventListener("click", () => {
-      const open = navLinks.classList.toggle("is-open");
-      navLinks.style.display = open ? "flex" : "";
+      setMenu(!navLinks.classList.contains("is-open"));
     });
-    navLinks.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
-      navLinks.classList.remove("is-open");
-      navLinks.style.display = "";
-    }));
+
+    if (navScrim) navScrim.addEventListener("click", () => setMenu(false));
+
+    navLinks.querySelectorAll("a").forEach(a =>
+      a.addEventListener("click", () => setMenu(false))
+    );
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setMenu(false);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 992) setMenu(false);
+    });
   }
 
   /* -------------------- Reveal on scroll -------------------- */
