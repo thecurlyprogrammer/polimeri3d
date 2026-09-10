@@ -1,0 +1,432 @@
+<title>Materioteca Privacy</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap');
+
+  :root {
+    --bg: #faf9f7;
+    --surface: #ffffff;
+    --ink: #1c2126;
+    --ink-soft: #4b5560;
+    --ink-faint: #8a929c;
+    --accent: #334757;
+    --accent-soft: #eef1f3;
+    --line: #e4e1db;
+    --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16191d;
+      --surface: #1d2126;
+      --ink: #ecebe8;
+      --ink-soft: #b7bec5;
+      --ink-faint: #767f88;
+      --accent: #9fb4c4;
+      --accent-soft: #262c32;
+      --line: #2c3238;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16191d;
+    --surface: #1d2126;
+    --ink: #ecebe8;
+    --ink-soft: #b7bec5;
+    --ink-faint: #767f88;
+    --accent: #9fb4c4;
+    --accent-soft: #262c32;
+    --line: #2c3238;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  header.doc-head {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 8px;
+  }
+  .mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    background: var(--accent);
+    flex: none;
+  }
+  .mark svg { display: block; width: 100%; height: 100%; }
+  .brand {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 2.65rem);
+    line-height: 1.12;
+    text-wrap: balance;
+    margin: 28px 0 6px;
+    color: var(--ink);
+  }
+  .updated {
+    color: var(--ink-faint);
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+  }
+
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 48px;
+  }
+  nav.toc p {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-faint);
+    margin: 0 0 12px;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 24px;
+  }
+  nav.toc li { break-inside: avoid; margin-bottom: 8px; }
+  nav.toc a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.92rem;
+  }
+  nav.toc a:hover { color: var(--accent); }
+
+  section.clause {
+    padding-top: 34px;
+    margin-top: 34px;
+    border-top: 1px solid var(--line);
+    scroll-margin-top: 24px;
+  }
+  section.clause:first-of-type { border-top: none; margin-top: 0; }
+
+  h2 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: var(--ink);
+    margin: 0 0 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  h2 .num {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border-radius: 6px;
+    padding: 2px 8px;
+  }
+
+  p { color: var(--ink-soft); margin: 0 0 14px; font-size: 0.98rem; }
+  p:last-child { margin-bottom: 0; }
+  strong { color: var(--ink); font-weight: 600; }
+  a { color: var(--accent); }
+
+  ul.plain { margin: 0 0 14px; padding-left: 20px; color: var(--ink-soft); }
+  ul.plain li { margin-bottom: 6px; font-size: 0.98rem; }
+
+  .callout {
+    background: var(--accent-soft);
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    margin-top: 16px;
+  }
+
+  .lang-switch {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 36px;
+  }
+  .lang-switch button {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
+  .lang-switch button[aria-pressed="true"] {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+  }
+
+  footer.doc-foot {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--ink-faint);
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 560px) {
+    nav.toc ol { columns: 1; }
+  }
+</style>
+
+<div class="page">
+
+  <div class="lang-switch" role="tablist" aria-label="Language">
+    <button type="button" id="btn-it" aria-pressed="true">Italiano</button>
+    <button type="button" id="btn-en" aria-pressed="false">English</button>
+  </div>
+
+  <div id="doc-it">
+    <header class="doc-head">
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5L19 7.5V16.5L12 20.5L5 16.5V7.5L12 3.5Z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/><path d="M5 7.5L12 11.5L19 7.5" stroke="white" stroke-width="1.4" stroke-linejoin="round"/><path d="M12 11.5V20.5" stroke="white" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      </div>
+      <span class="brand">Materioteca</span>
+    </header>
+
+    <h1>Informativa sulla Privacy</h1>
+    <p class="updated">Ultimo aggiornamento: 10 settembre 2026</p>
+
+    <nav class="toc" aria-label="Indice">
+      <p>Indice</p>
+      <ol>
+        <li><a href="#it-1">1. Titolare del trattamento</a></li>
+        <li><a href="#it-2">2. Dati trattati</a></li>
+        <li><a href="#it-3">3. Dove sono conservati i tuoi dati</a></li>
+        <li><a href="#it-4">4. Dati dei tuoi clienti</a></li>
+        <li><a href="#it-5">5. Nessuna pubblicità, nessun tracciamento</a></li>
+        <li><a href="#it-6">6. Esportazione dei dati</a></li>
+        <li><a href="#it-7">7. Cancellazione dei dati</a></li>
+        <li><a href="#it-8">8. Base giuridica e finalità</a></li>
+        <li><a href="#it-9">9. I tuoi diritti</a></li>
+        <li><a href="#it-10">10. Minori</a></li>
+        <li><a href="#it-11">11. Modifiche a questa informativa</a></li>
+        <li><a href="#it-12">12. Contatti</a></li>
+      </ol>
+    </nav>
+
+    <section class="clause" id="it-1">
+      <h2><span class="num">1</span>Titolare del trattamento</h2>
+      <p><strong>Polimeri3D di Sandro Greco</strong> — P.IVA 02162920850 — è il titolare del trattamento dei dati raccolti tramite l'app Materioteca.</p>
+      <p>Contatto: <a href="mailto:info@polimeri3d.com">info@polimeri3d.com</a></p>
+    </section>
+
+    <section class="clause" id="it-2">
+      <h2><span class="num">2</span>Dati trattati</h2>
+      <p>Materioteca tratta esclusivamente i dati che inserisci volontariamente per usare le funzionalità dell'app:</p>
+      <ul class="plain">
+        <li>Dati del profilo: nome, cognome, nome dell'attività, tariffe orarie predefinite, margine predefinito, costo dell'energia</li>
+        <li>Dati operativi: materiali e filamenti, stampanti, progetti, spazi di conservazione, clienti, preventivi</li>
+      </ul>
+      <p>L'app non richiede né accede a fotocamera, microfono, rubrica, posizione geografica o dati biometrici. Non ti viene mai chiesto di creare un account con password: l'identità è legata unicamente al tuo Apple ID.</p>
+    </section>
+
+    <section class="clause" id="it-3">
+      <h2><span class="num">3</span>Dove sono conservati i tuoi dati</h2>
+      <p>Tutti i dati che inserisci vengono salvati esclusivamente nel tuo <strong>database privato di iCloud</strong> (Apple CloudKit), collegato al tuo Apple ID personale, e si sincronizzano automaticamente tra i tuoi dispositivi tramite l'infrastruttura Apple.</p>
+      <p>Polimeri3D <strong>non gestisce alcun server proprio</strong> e <strong>non ha accesso</strong> ai tuoi dati in nessun momento: non possiamo leggerli, non li riceviamo, non li conserviamo altrove.</p>
+    </section>
+
+    <section class="clause" id="it-4">
+      <h2><span class="num">4</span>Dati dei tuoi clienti</h2>
+      <p>Se usi Materioteca per la tua attività, puoi inserire dati relativi ai tuoi clienti (nome, progetti, preventivi). In questo caso <strong>tu sei il titolare del trattamento</strong> di quei dati nei confronti dei tuoi clienti; Apple, tramite CloudKit, agisce esclusivamente come fornitore dell'infrastruttura di archiviazione e sincronizzazione. Polimeri3D non ha accesso a questi dati in nessun momento.</p>
+      <div class="callout">Se gestisci dati di clienti nell'ambito della tua attività, ti consigliamo di verificare autonomamente gli obblighi di trattamento dati applicabili alla tua attività (es. GDPR), poiché questa informativa descrive le pratiche dell'app ma non sostituisce una consulenza legale personalizzata.</div>
+    </section>
+
+    <section class="clause" id="it-5">
+      <h2><span class="num">5</span>Nessuna pubblicità, nessun tracciamento</h2>
+      <p>Materioteca non contiene pubblicità, non utilizza SDK di terze parti per analytics o marketing, non traccia il tuo comportamento all'interno o all'esterno dell'app, e non vende né condivide i tuoi dati con terzi a scopo commerciale.</p>
+    </section>
+
+    <section class="clause" id="it-6">
+      <h2><span class="num">6</span>Esportazione dei dati</h2>
+      <p>Dalla sezione Profilo puoi esportare in qualsiasi momento una copia completa dei tuoi dati in formato CSV. Il file viene generato sul tuo dispositivo e resta sotto il tuo esclusivo controllo — decidi tu dove salvarlo o condividerlo.</p>
+    </section>
+
+    <section class="clause" id="it-7">
+      <h2><span class="num">7</span>Cancellazione dei dati</h2>
+      <p>Puoi eliminare permanentemente il tuo account e tutti i dati associati in qualsiasi momento, dalla sezione <strong>Profilo → Elimina account</strong>. L'operazione è immediata e irreversibile.</p>
+    </section>
+
+    <section class="clause" id="it-8">
+      <h2><span class="num">8</span>Base giuridica e finalità</h2>
+      <p>I dati che inserisci sono trattati esclusivamente per fornirti le funzionalità dell'app (gestione di magazzino, stampanti, progetti, clienti e preventivi). La base giuridica del trattamento è l'esecuzione del servizio richiesto dall'utente (art. 6.1.b del Regolamento UE 2016/679 — GDPR).</p>
+    </section>
+
+    <section class="clause" id="it-9">
+      <h2><span class="num">9</span>I tuoi diritti</h2>
+      <p>In qualità di interessato, hai diritto di accesso, rettifica, cancellazione, portabilità e opposizione al trattamento dei tuoi dati. Puoi esercitare la maggior parte di questi diritti direttamente dall'app (modifica o cancellazione dei dati in autonomia), oppure contattandoci a <a href="mailto:info@polimeri3d.com">info@polimeri3d.com</a> per qualsiasi richiesta.</p>
+    </section>
+
+    <section class="clause" id="it-10">
+      <h2><span class="num">10</span>Minori</h2>
+      <p>Materioteca non è rivolta a minori di 13 anni e non raccogliamo consapevolmente dati relativi a minori.</p>
+    </section>
+
+    <section class="clause" id="it-11">
+      <h2><span class="num">11</span>Modifiche a questa informativa</h2>
+      <p>Eventuali modifiche a questa informativa saranno pubblicate su questa stessa pagina, con indicazione della data di aggiornamento in cima al documento.</p>
+    </section>
+
+    <section class="clause" id="it-12">
+      <h2><span class="num">12</span>Contatti</h2>
+      <p>Per qualsiasi domanda relativa a questa informativa o al trattamento dei tuoi dati, scrivi a <a href="mailto:info@polimeri3d.com">info@polimeri3d.com</a>.</p>
+    </section>
+
+    <footer class="doc-foot">Polimeri3D di Sandro Greco — P.IVA 02162920850</footer>
+  </div>
+
+  <div id="doc-en" hidden>
+    <header class="doc-head">
+      <div class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5L19 7.5V16.5L12 20.5L5 16.5V7.5L12 3.5Z" stroke="white" stroke-width="1.4" stroke-linejoin="round"/><path d="M5 7.5L12 11.5L19 7.5" stroke="white" stroke-width="1.4" stroke-linejoin="round"/><path d="M12 11.5V20.5" stroke="white" stroke-width="1.4" stroke-linejoin="round"/></svg>
+      </div>
+      <span class="brand">Materioteca</span>
+    </header>
+
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: September 10, 2026</p>
+
+    <nav class="toc" aria-label="Table of contents">
+      <p>Contents</p>
+      <ol>
+        <li><a href="#en-1">1. Data controller</a></li>
+        <li><a href="#en-2">2. Data we process</a></li>
+        <li><a href="#en-3">3. Where your data lives</a></li>
+        <li><a href="#en-4">4. Your clients' data</a></li>
+        <li><a href="#en-5">5. No ads, no tracking</a></li>
+        <li><a href="#en-6">6. Exporting your data</a></li>
+        <li><a href="#en-7">7. Deleting your data</a></li>
+        <li><a href="#en-8">8. Legal basis and purpose</a></li>
+        <li><a href="#en-9">9. Your rights</a></li>
+        <li><a href="#en-10">10. Children</a></li>
+        <li><a href="#en-11">11. Changes to this policy</a></li>
+        <li><a href="#en-12">12. Contact</a></li>
+      </ol>
+    </nav>
+
+    <section class="clause" id="en-1">
+      <h2><span class="num">1</span>Data controller</h2>
+      <p><strong>Polimeri3D di Sandro Greco</strong> — VAT no. 02162920850 — is the data controller for data collected through the Materioteca app.</p>
+      <p>Contact: <a href="mailto:info@polimeri3d.com">info@polimeri3d.com</a></p>
+    </section>
+
+    <section class="clause" id="en-2">
+      <h2><span class="num">2</span>Data we process</h2>
+      <p>Materioteca only processes the data you voluntarily enter to use the app's features:</p>
+      <ul class="plain">
+        <li>Profile data: first name, last name, business name, default hourly rates, default margin, energy cost</li>
+        <li>Operational data: materials and filaments, printers, projects, storage locations, clients, quotes</li>
+      </ul>
+      <p>The app does not request or access your camera, microphone, contacts, location, or biometric data. You're never asked to create a password-based account: your identity is tied solely to your Apple ID.</p>
+    </section>
+
+    <section class="clause" id="en-3">
+      <h2><span class="num">3</span>Where your data lives</h2>
+      <p>All the data you enter is stored exclusively in your own <strong>private iCloud database</strong> (Apple CloudKit), linked to your personal Apple ID, and syncs automatically across your devices through Apple's infrastructure.</p>
+      <p>Polimeri3D <strong>does not operate any server of its own</strong> and <strong>has no access</strong> to your data at any point: we cannot read it, we never receive it, and we never store it anywhere else.</p>
+    </section>
+
+    <section class="clause" id="en-4">
+      <h2><span class="num">4</span>Your clients' data</h2>
+      <p>If you use Materioteca for your business, you may enter data about your own clients (name, projects, quotes). In that case <strong>you are the data controller</strong> for that data with respect to your clients; Apple, through CloudKit, acts solely as the storage and sync infrastructure provider. Polimeri3D never has access to this data.</p>
+      <div class="callout">If you manage client data as part of your business, we recommend independently reviewing the data-protection obligations that apply to your business (e.g. GDPR) — this policy describes the app's own practices but does not replace tailored legal advice.</div>
+    </section>
+
+    <section class="clause" id="en-5">
+      <h2><span class="num">5</span>No ads, no tracking</h2>
+      <p>Materioteca contains no advertising, uses no third-party analytics or marketing SDKs, does not track your behavior inside or outside the app, and never sells or shares your data with third parties for commercial purposes.</p>
+    </section>
+
+    <section class="clause" id="en-6">
+      <h2><span class="num">6</span>Exporting your data</h2>
+      <p>From the Profile section you can export a complete copy of your data as CSV files at any time. The file is generated on your own device and stays under your exclusive control — you decide where to save or share it.</p>
+    </section>
+
+    <section class="clause" id="en-7">
+      <h2><span class="num">7</span>Deleting your data</h2>
+      <p>You can permanently delete your account and all associated data at any time, from <strong>Profile → Delete account</strong>. This action is immediate and irreversible.</p>
+    </section>
+
+    <section class="clause" id="en-8">
+      <h2><span class="num">8</span>Legal basis and purpose</h2>
+      <p>The data you enter is processed solely to provide the app's features (inventory, printer, project, client and quote management). The legal basis for this processing is the performance of the service requested by the user (Art. 6.1.b of EU Regulation 2016/679 — GDPR).</p>
+    </section>
+
+    <section class="clause" id="en-9">
+      <h2><span class="num">9</span>Your rights</h2>
+      <p>As a data subject, you have the right to access, rectify, erase, port, and object to the processing of your data. You can exercise most of these rights directly within the app (editing or deleting data yourself), or by contacting us at <a href="mailto:info@polimeri3d.com">info@polimeri3d.com</a> for any request.</p>
+    </section>
+
+    <section class="clause" id="en-10">
+      <h2><span class="num">10</span>Children</h2>
+      <p>Materioteca is not directed at children under 13, and we do not knowingly collect data from children.</p>
+    </section>
+
+    <section class="clause" id="en-11">
+      <h2><span class="num">11</span>Changes to this policy</h2>
+      <p>Any changes to this policy will be published on this same page, with an updated date shown at the top of the document.</p>
+    </section>
+
+    <section class="clause" id="en-12">
+      <h2><span class="num">12</span>Contact</h2>
+      <p>For any question about this policy or about how your data is handled, write to <a href="mailto:info@polimeri3d.com">info@polimeri3d.com</a>.</p>
+    </section>
+
+    <footer class="doc-foot">Polimeri3D di Sandro Greco — VAT no. 02162920850</footer>
+  </div>
+
+</div>
+
+<script>
+  const btnIt = document.getElementById('btn-it');
+  const btnEn = document.getElementById('btn-en');
+  const docIt = document.getElementById('doc-it');
+  const docEn = document.getElementById('doc-en');
+
+  function showLang(lang) {
+    const isIt = lang === 'it';
+    docIt.hidden = !isIt;
+    docEn.hidden = isIt;
+    btnIt.setAttribute('aria-pressed', String(isIt));
+    btnEn.setAttribute('aria-pressed', String(!isIt));
+    try { localStorage.setItem('materioteca-privacy-lang', lang); } catch (e) {}
+  }
+
+  btnIt.addEventListener('click', () => showLang('it'));
+  btnEn.addEventListener('click', () => showLang('en'));
+
+  try {
+    const saved = localStorage.getItem('materioteca-privacy-lang');
+    if (saved === 'en') showLang('en');
+  } catch (e) {}
+</script>
