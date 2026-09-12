@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Materioteca — l'app iOS per il magazzino filamenti | Polimeri3D</title>
+  <meta name="description" content="Materioteca è l'app iOS di Polimeri3D per gestire bobine di filamento, stampanti, progetti e costi reali di ogni stampa 3D. Prossimamente su App Store.">
+  <link rel="canonical" href="https://www.polimeri3d.com/materioteca.html">
+
+  <link rel="stylesheet" href="main.css?v=11">
+
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+  <link rel="shortcut icon" href="favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-title" content="Polimeri3D">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W13Z7K4299"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-W13Z7K4299');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17528995737"></script>
+  <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'AW-17528995737'); </script>
+
+  <script src="main.js?v=12" defer></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header id="navbar">
+    <div class="nav-scrim" id="navScrim" aria-hidden="true"></div>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+          <path d="M50 8 L90 30 L90 70 L50 92 L10 70 L10 30 Z"/>
+          <path d="M50 8 L50 50 M50 50 L90 30 M50 50 L10 30 M50 50 L50 92"/>
+        </svg>
+        <span>POLIMERI3D</span>
+      </a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html#chi-siamo">Chi siamo</a></li>
+          <li><a href="index.html#come-funziona">Come funziona</a></li>
+          <li><a href="index.html#materiali">Materiali</a></li>
+          <li><a href="materioteca.html" aria-current="page">Materioteca</a></li>
+          <li><a href="index.html#galleria">Galleria</a></li>
+          <li><a href="index.html#contatti">Contatti</a></li>
+          <li class="nav-links-cta">
+            <a class="btn btn-primary btn-block" href="index.html#contatti">Richiedi un preventivo</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-primary" href="index.html#contatti">Richiedi un preventivo</a>
+        <button class="nav-toggle" id="navToggle"
+                aria-label="Apri il menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="mtk-hero" id="mtk-hero">
+    <svg class="mtk-field" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+      <g fill="none" stroke="currentColor" stroke-width="1">
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(0 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(4.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(9 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(13.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(18 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(22.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(27 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(31.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(36 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(40.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(45 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(49.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(54 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(58.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(63 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(67.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(72 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(76.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(81 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(85.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(90 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(94.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(99 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(103.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(108 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(112.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(117 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(121.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(126 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(130.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(135 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(139.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(144 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(148.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(153 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(157.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(162 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(166.5 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(171 300 300)"/>
+        <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(175.5 300 300)"/>
+      </g>
+    </svg>
+    <div class="mtk-hero__inner">
+      <div class="mtk-hero__copy">
+        <span class="eyebrow">L'app di Polimeri3D</span>
+        <h1>Ogni bobina, ogni stampante,<br><em>un solo posto</em>.</h1>
+        <p class="lead">Materioteca tiene insieme filamenti, stampanti, progetti e costi. Sai sempre quanto
+          materiale ti resta e quanto ti costa davvero ogni stampa.</p>
+        <div class="mtk-hero__actions">
+          <span class="mtk-badge mtk-badge--light">
+            <span class="mtk-badge__dot" aria-hidden="true"></span>
+            <span class="mtk-badge__text"><small>Prossimamente su</small><strong>App Store</strong></span>
+          </span>
+          <a class="btn btn-ghost" href="#funzioni">Guarda cosa fa</a>
+        </div>
+        <ul class="mtk-hero__meta">
+          <li>Per iPhone</li>
+          <li>Interfaccia in italiano</li>
+        </ul>
+      </div>
+      <div class="mtk-hero__media">
+        <figure class="mtk-phone mtk-phone--on-dark">
+          <img class="mtk-phone__screen" src="assets/app/dashboard-600.png" srcset="assets/app/dashboard-600.png 600w, assets/app/dashboard-900.png 900w" sizes="(max-width: 600px) 55vw, 320px" width="1206" height="2622"
+               fetchpriority="high" decoding="async"
+               alt="Schermata Dashboard di Materioteca: panoramica di clienti, progetti, stampanti e materiale in magazzino, con ore di stampa e costi in euro">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNZIONI -->
+  <section class="mtk-features" id="funzioni">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Cosa fa</span>
+        <h2>Cinque schermate, un laboratorio sotto controllo.</h2>
+        <p>Nessun foglio di calcolo, nessun conto a mente: quanto materiale resta, quanto è costata
+          davvero ogni stampa.</p>
+      </div>
+
+      <article class="mtk-feature reveal">
+        <div class="mtk-feature__copy">
+          <h3>Tutto il laboratorio in una schermata.</h3>
+          <p>Clienti, progetti, stampanti e bobine in magazzino. Sotto, i costi: ore di stampa, costo
+            materiale, costo produzione, guadagno.</p>
+        </div>
+        <div class="mtk-stage mtk-stage--ink">
+          <figure class="mtk-phone mtk-phone--on-dark">
+            <img class="mtk-phone__screen" src="assets/app/dashboard-600.png" srcset="assets/app/dashboard-600.png 600w, assets/app/dashboard-900.png 900w" sizes="(max-width: 600px) 55vw, 320px" width="1206" height="2622"
+                 loading="lazy" decoding="async"
+                 alt="Schermata Dashboard di Materioteca con panoramica clienti, progetti, stampanti e costi">
+          </figure>
+        </div>
+      </article>
+
+      <article class="mtk-feature mtk-feature--reverse reveal">
+        <div class="mtk-feature__copy">
+          <h3>Sai sempre quanti grammi ti restano.</h3>
+          <p>Colore, grammi residui, percentuale e stato di essiccatura. Filtra per brand, materiale o
+            spazio: sai anche in quale scatola si trova.</p>
+        </div>
+        <div class="mtk-stage mtk-stage--soft">
+          <figure class="mtk-phone">
+            <img class="mtk-phone__screen" src="assets/app/materiali-600.png" srcset="assets/app/materiali-600.png 600w, assets/app/materiali-900.png 900w" sizes="(max-width: 600px) 55vw, 320px" width="1206" height="2622"
+                 loading="lazy" decoding="async"
+                 alt="Elenco delle bobine di filamento in Materioteca con brand, colore, quantità residua e stato di essiccatura">
+          </figure>
+        </div>
+      </article>
+
+      <article class="mtk-feature reveal">
+        <div class="mtk-feature__copy">
+          <h3>La manutenzione non ti scappa più.</h3>
+          <p>Ore FDM totali, seriale e stato di ogni macchina. Quando una manutenzione è scaduta lo leggi
+            in dashboard, prima che diventi un fermo.</p>
+        </div>
+        <div class="mtk-stage mtk-stage--soft mtk-stage--crop-lg">
+          <figure class="mtk-phone">
+            <img class="mtk-phone__screen" src="assets/app/stampanti-600.png" srcset="assets/app/stampanti-600.png 600w, assets/app/stampanti-900.png 900w" sizes="(max-width: 600px) 55vw, 320px" width="1206" height="2622"
+                 loading="lazy" decoding="async"
+                 alt="Elenco stampanti in Materioteca con ore di lavoro e stato della manutenzione">
+          </figure>
+        </div>
+      </article>
+
+      <article class="mtk-feature mtk-feature--reverse reveal">
+        <div class="mtk-feature__copy">
+          <h3>Il costo si calcola da solo.</h3>
+          <p>Scegli stampante, ore e materiale: il costo in euro esce da sé. Ogni progetto resta legato
+            al suo cliente, da pianificato a completato.</p>
+        </div>
+        <div class="mtk-stage mtk-stage--soft mtk-stage--crop-lg">
+          <figure class="mtk-phone">
+            <img class="mtk-phone__screen" src="assets/app/progetti-600.png" srcset="assets/app/progetti-600.png 600w, assets/app/progetti-900.png 900w" sizes="(max-width: 600px) 55vw, 320px" width="1206" height="2622"
+                 loading="lazy" decoding="async"
+                 alt="Elenco progetti in Materioteca con stato pianificato o completato, ore di stampa e costo in euro">
+          </figure>
+        </div>
+      </article>
+
+      <article class="mtk-feature reveal">
+        <div class="mtk-feature__copy">
+          <h3>Dove vanno i soldi, in un grafico.</h3>
+          <p>Costo di stampa nel tempo, diviso tra materiale, energia e macchina. Il filamento che consumi
+            di più. Il valore generato da ogni stampante.</p>
+        </div>
+        <div class="mtk-stage mtk-stage--ink">
+          <figure class="mtk-phone mtk-phone--on-dark">
+            <img class="mtk-phone__screen" src="assets/app/statistiche-600.png" srcset="assets/app/statistiche-600.png 600w, assets/app/statistiche-900.png 900w" sizes="(max-width: 600px) 55vw, 320px" width="1206" height="2622"
+                 loading="lazy" decoding="async"
+                 alt="Statistiche di Materioteca: grafico del costo di stampa nel tempo diviso tra materiale, energia e macchina">
+          </figure>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- PERCHÉ L'ABBIAMO CREATA -->
+  <section class="mtk-origin" id="perche">
+    <div class="container mtk-origin__inner reveal">
+      <span class="eyebrow">Perché l'abbiamo creata</span>
+      <blockquote class="mtk-quote">
+        <p>Gestivamo decine di bobine con un foglio di calcolo e la memoria. Quanto PLA rosso era
+          rimasto, quanto costava davvero quella staffa, quando scadeva la manutenzione della A1.
+          Serviva uno strumento che rispondesse in tre secondi, dal telefono, mentre sei in laboratorio.</p>
+      </blockquote>
+      <div class="mtk-origin__by">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5"
+             stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+          <path d="M50 8 L90 30 L90 70 L50 92 L10 70 L10 30 Z"/>
+          <path d="M50 8 L50 50 M50 50 L90 30 M50 50 L10 30 M50 50 L50 92"/>
+        </svg>
+        <div>
+          <strong>Il team Polimeri3D</strong>
+          <span>Service di stampa 3D · Gela (CL)</span>
+        </div>
+      </div>
+      <p class="mtk-origin__note">Materioteca è nata come strumento interno e la usiamo ogni giorno sulle
+        nostre stampanti. La pubblichiamo perché lo stesso problema ce l'hanno tutti i maker e i piccoli
+        service che stampano più di qualche bobina al mese.</p>
+    </div>
+  </section>
+
+  <!-- DISPONIBILITÀ -->
+  <section class="mtk-cta-section" id="disponibilita">
+    <div class="container">
+      <div class="mtk-cta reveal">
+        <svg class="mtk-field mtk-field--panel" viewBox="0 0 600 600" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-width="1">
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(0 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(4.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(9 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(13.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(18 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(22.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(27 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(31.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(36 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(40.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(45 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(49.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(54 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(58.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(63 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(67.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(72 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(76.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(81 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(85.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(90 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(94.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(99 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(103.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(108 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(112.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(117 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(121.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(126 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(130.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(135 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(139.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(144 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(148.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(153 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(157.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(162 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(166.5 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(171 300 300)"/>
+            <ellipse cx="300" cy="300" rx="196" ry="76" transform="rotate(175.5 300 300)"/>
+          </g>
+        </svg>
+        <div class="mtk-cta__inner">
+          <h2>Materioteca arriva presto su App Store.</h2>
+          <p>Stiamo completando i test in laboratorio. Lasciaci una riga e ti scriviamo il giorno del
+            lancio — niente newsletter, solo quello.</p>
+          <div class="mtk-cta__actions">
+            <span class="mtk-badge mtk-badge--light">
+              <span class="mtk-badge__dot" aria-hidden="true"></span>
+              <span class="mtk-badge__text"><small>Prossimamente su</small><strong>App Store</strong></span>
+            </span>
+            <a class="btn btn-light" href="mailto:info@polimeri3d.com?subject=Materioteca%20%E2%80%94%20avvisami%20al%20lancio">Avvisami al lancio</a>
+          </div>
+          <p class="mtk-cta__meta">Per iPhone · interfaccia in italiano</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/393793190383" class="whatsapp-float" target="_blank" rel="noopener">
+    <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
+  </a>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/newLogo/Logo_White_Blue.png" alt="Logo di Polimeri3D" style="height:44px;width:auto;">
+          <p>Il vostro service di stampa 3D per stampe personalizzate e di alta qualità in Italia. Prototipazione,
+            produzione in serie e oggetti su misura.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Naviga</h4>
+          <div><a href="index.html#chi-siamo">Chi siamo</a></div>
+          <div><a href="index.html#materiali">Materiali</a></div>
+          <div><a href="materioteca.html">Materioteca — app iOS</a></div>
+          <div><a href="index.html#galleria">Galleria</a></div>
+          <div><a href="index.html#contatti">Contatti</a></div>
+        </div>
+        <div class="footer-col">
+          <h4>Contatti</h4>
+          <div><a href="mailto:info@polimeri3d.com">info@polimeri3d.com</a></div>
+          <div><a href="tel:+393793190383">+39 379 319 0383</a></div>
+          <div>P.IVA 02162920850</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Polimeri3D</div>
+        <a href="https://www.freeprivacypolicy.com/live/fb94c364-4891-47e6-a76c-d4b73e79bd4c" target="_blank" rel="noopener">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 100% privacy-first analytics -->
+  <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
+</body>
+
+</html>

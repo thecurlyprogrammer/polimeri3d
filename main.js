@@ -247,7 +247,10 @@ document.addEventListener("DOMContentLoaded", () => {
       lightbox.classList.add("is-open");
     });
   });
-  const closeLightbox = () => lightbox.classList.remove("is-open");
+  // Il listener Escape qui sotto è su document, quindi gira anche sulle pagine
+  // senza galleria (thanks.html, materioteca.html): la guardia va nella funzione,
+  // non solo sulla registrazione dei listener del lightbox.
+  const closeLightbox = () => { if (lightbox) lightbox.classList.remove("is-open"); };
   if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
   if (lightbox) lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLightbox(); });
