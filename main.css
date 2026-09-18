@@ -1205,34 +1205,19 @@ footer {
 .mtk-cta__meta { font-size: 13px; color: #8fa2ae; }
 .mtk-cta a:focus-visible { outline: 2px solid #a9c1d1; outline-offset: 3px; border-radius: 980px; }
 
-.mtk-badge {
-  display: inline-flex; align-items: center; gap: 12px;
-  padding: 11px 24px 12px;
-  border-radius: 980px;
-  background: var(--ink); color: #fff;
-  border: 1px solid transparent;
-  line-height: 1.1;
-  cursor: default;
-  -webkit-user-select: none; user-select: none;
+/* Badge ufficiale Apple "Scarica su App Store" (link reale, app pubblicata) */
+.mtk-appstore-badge {
+  display: inline-flex;
+  border-radius: 10px;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
 }
-.mtk-badge--light {
-  background: rgba(255,255,255,.09);
-  border-color: rgba(255,255,255,.24);
-  color: #fff;
-  backdrop-filter: blur(8px) saturate(140%);
-  -webkit-backdrop-filter: blur(8px) saturate(140%);
+.mtk-appstore-badge img {
+  display: block;
+  height: 44px;
+  width: auto;
 }
-.mtk-badge__dot {
-  width: 8px; height: 8px; border-radius: 50%; flex: none;
-  background: var(--accent);
-  box-shadow: 0 0 0 4px rgba(111,151,179,.18);
-}
-.mtk-badge__text { display: flex; flex-direction: column; gap: 2px; text-align: left; }
-.mtk-badge__text small {
-  font-size: 11px; font-weight: 500; letter-spacing: .07em;
-  text-transform: uppercase; opacity: .70;
-}
-.mtk-badge__text strong { font-size: 17px; font-weight: 600; letter-spacing: -.01em; }
+.mtk-appstore-badge:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+.mtk-appstore-badge:focus-visible { outline: 2px solid var(--accent-strong); outline-offset: 3px; border-radius: 10px; }
 
 .mtk-teaser { background: var(--surface); }
 .mtk-teaser__card {
