@@ -1264,3 +1264,36 @@ footer {
 
 .nav-links a[aria-current="page"] { color: var(--ink); font-weight: 600; }
 [id] { scroll-margin-top: 96px; }
+
+/* ==========================================================================
+   Guida ai materiali (materiali-stampa-3d.html)
+   ========================================================================== */
+.hero-guide { flex: none; min-height: 0; padding: 168px 24px 88px; }
+.hero-guide h1 { max-width: 820px; margin-left: auto; margin-right: auto; }
+.guide-alt { background: var(--surface); }
+.container--narrow { max-width: 820px; }
+.guide-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.guide-grid--4 { grid-template-columns: repeat(2, 1fr); }
+.guide-item {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 28px 26px;
+}
+.guide-item h3 { font-size: 20px; font-weight: 700; margin: 0 0 8px; color: var(--ink); }
+.guide-item .tagline { font-size: 13px; font-weight: 600; color: var(--accent-strong); margin: 0 0 12px; }
+.guide-item p { font-size: 15px; color: var(--text-soft); margin: 0 0 12px; }
+.guide-item p:last-child { margin-bottom: 0; }
+.guide-item .uses { color: var(--ink-2); }
+.spec-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-m); background: var(--paper); }
+.spec-table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 640px; }
+.spec-table th, .spec-table td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--line); }
+.spec-table thead th { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-soft); background: var(--surface-soft); }
+.spec-table tbody th { font-weight: 700; color: var(--ink); }
+.spec-table tbody td { color: var(--text-soft); }
+.spec-table tbody tr:last-child th, .spec-table tbody tr:last-child td { border-bottom: 0; }
+.guide-steps { margin: 0; padding-left: 22px; display: grid; gap: 16px; font-size: 17px; color: var(--text-soft); }
+.guide-steps strong { color: var(--ink); }
+@media (max-width: 992px) { .guide-grid { grid-template-columns: 1fr; } .guide-grid--4 { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .hero-guide { padding: 140px 20px 64px; } }
+.text-link { color: var(--accent-strong); text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
