@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+/* Il font Inter viene caricato da <link> nell'<head> di ogni pagina (non da
+   @import qui) per non aggiungere un hop extra alla catena di rendering che
+   blocca il CSS. */
 
 /* ==========================================================================
    Design tokens — palette derivata dal logo Polimeri3D

@@ -493,6 +493,11 @@ document.addEventListener("DOMContentLoaded", () => {
           contactForm.reset();
           if (fileList) fileList.innerHTML = "";
           if (fileError) fileError.classList.remove("is-visible");
+          // Percorso senza allegato: resta su questa pagina (nessun redirect
+          // a thanks.html), quindi la conversione va registrata qui.
+          if (typeof gtag === "function") {
+            gtag("event", "conversion", { send_to: "AW-17528995737/gFm-CJXYyJUbEJn_vKZB" });
+          }
         })
         .catch((err) => {
           console.error("Invio richiesta di preventivo fallito:", err);
